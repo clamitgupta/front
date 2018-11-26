@@ -1,0 +1,185 @@
+*{
+    box-sizing: border-box;
+}
+img {
+    max-width: 100%;
+}
+body {
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: auto;
+    float: left;
+    width: 100%;
+    background: #f1f1f1;
+}
+button,a{
+    cursor: pointer;
+}
+*{
+    box-shadow: none;
+    outline: none;
+}
+.contact-info h2 {
+    display: inline-block;
+    vertical-align: middle;
+    color: #488ecb;
+    margin: 7px 0;
+    font-size: 18px;
+}
+.contact-info button {
+    float: right;
+    border: 0px;
+    font-size: 15px;
+    padding: 9px 27px;
+    border-radius: 3px;
+    background: #488ecb;
+    color: #fff;
+}
+.contact-info {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 17px;
+    border-bottom: 1px solid #ccc;
+}
+.table-edit-custom {
+    width: 100%;
+    text-align: center;
+}
+.table-edit-custom tr th:first-child, .table-edit-custom tr td:first-child {
+    text-align: left;
+}
+.list-contact ,.contact-form{
+    max-width: 850px;
+    margin: 30px auto;
+    background: #fff;
+    box-shadow: 0px 1px 9px rgba(0,0,0,0.1);    
+    width: 93%;
+}
+.table-edit-custom th {
+    background: #3a91cd;
+    color: #fff;
+}
+.table-edit-custom th, .table-edit-custom td {
+    padding: 11px 15px;
+}
+.table-outer{
+    padding: 20px 17px;
+}
+.contact-form h2 {
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    color: #488ecb;
+    margin: 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 14px 17px;
+}
+.contact-form form {
+    padding: 20px 18px;
+    width: 100%;
+    display: inline-block;
+}
+.contact-form form .form-grid {
+    display: inline-block;
+    width: calc(100% / 2 - 5px);
+    position: relative;
+    margin-bottom: 23px;
+    padding-right: 31px;
+}
+.contact-form form .form-grid:nth-child(2n) {
+    padding-right: 0px;
+}
+.contact-form form .form-grid input {
+    width: 100%;
+    height: 40px;
+    font-family: Montserrat, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 0px;
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+}
+.text-error {
+    position: absolute;
+    left: 0;
+    color: red;
+    font-size: 11px;
+}
+.text-error p {
+    margin: auto;
+}
+.contact-form form .form-submit-full input {
+    width: calc(100% / 2);
+    display: inline-block;
+    vertical-align: top;
+      cursor: pointer;
+    max-width: 140px;
+    border: 0px;
+    margin-right: 11px;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #353535;
+}
+.contact-form form .form-submit-full {
+    width: 100%;
+    margin: 20px auto 20px;
+}
+.contact-form form .form-submit-full input:first-child {
+    background: #488ecb;
+    color: #fff;
+}
+.contact-form form .form-submit-full input:hover {
+    opacity: 0.9;
+}
+.user-actions {
+    display: inline-block;
+    width: 28px;
+    vertical-align: middle;
+    height: 28px;
+    background: #488ecb;
+    padding: 6px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.user-actions.del-user{
+    background: #fd5555;
+}
+.pagination-bottm {
+    text-align: right;
+}
+.pagination-bottm .current {
+    border-radius: 50%;
+    padding: 6px 0px !important;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.pagination-bottm .ngx-pagination a:hover,.pagination-bottm  .ngx-pagination button:hover {
+    background: transparent;
+    color: #009de9;
+}
+.ngx-pagination {
+    padding: 0;
+}
+@media screen and (max-width: 640px) {
+.overflow-outer{
+    overflow: auto;
+}
+.table-scroll {
+    width: 640px;
+}
+.list-contact, .contact-form {
+    margin: 15px auto;
+}
+.contact-form form .form-grid {
+    width: 100%;
+    padding-right: 0;
+}
+.contact-form form .form-submit-full input {
+    width: calc(100% / 2);
+    max-width: 110px;
+}
+}
