@@ -1,0 +1,39 @@
+<div class="contact-outer" id="destination">
+  <div class="contact-form-main">
+    <div class="contact-form" >
+      <h2 >Add User</h2>
+      <form role="form" [formGroup]="addUserFrm" name="adduser_form" id="adduser_form" novalidate="novalidate"  #addUserfrm="ngForm" (ngSubmit)="addUserfrm.valid && adduser(addUserFrm.value)">
+        <div class="form-grid">
+          <input type="text" placeholder="First Name" type="text" name="fname" [ngClass]="((addUserFrm.controls['fname'].hasError('required') && addUserFrm.controls['fname'].touched) || (addUserfrm.submitted && addUserFrm.controls['fname'].errors)) ? 'error-input':''" value="" formControlName="fname" >
+          <div class="text-error" *ngIf="((addUserFrm.controls['fname'].hasError('required') && addUserFrm.controls['fname'].touched) || (addUserfrm.submitted && addUserFrm.controls['fname'].errors))">
+            <p>Please enter first name.</p>
+          </div>
+        </div>
+        <div class="form-grid">
+          <input type="text" placeholder="Last Name" type="text" name="lname" [ngClass]="((addUserFrm.controls['lname'].hasError('required') && addUserFrm.controls['lname'].touched) || (addUserfrm.submitted && addUserFrm.controls['lname'].errors)) ? 'error-input':''" value="" formControlName="lname" >
+          <div class="text-error" *ngIf="((addUserFrm.controls['lname'].hasError('required') && addUserFrm.controls['lname'].touched) || (addUserfrm.submitted && addUserFrm.controls['lname'].errors))">
+            <p>Please enter last name.</p>
+          </div>
+        </div>
+        <div class="form-grid">
+          <input type="text" placeholder="Email" class="form-control border-input" pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}" [ngClass]="((addUserFrm.controls['email'].hasError('required') && addUserFrm.controls['email'].touched) || (addUserfrm.submitted && addUserFrm.controls['email'].errors) || (addUserFrm.controls['email'].errors?.pattern && addUserFrm.controls['email'].touched)) ? 'error-input':''" value="" formControlName="email">
+          <div class="text-error" *ngIf="((addUserFrm.controls['email'].hasError('required') && addUserFrm.controls['email'].touched) || (addUserfrm.submitted && addUserFrm.controls['email'].errors) || (addUserFrm.controls['email'].errors?.pattern && addUserFrm.controls['email'].touched))">
+            <p  *ngIf="(addUserFrm.controls['email'].errors?.pattern)">Please enter valid email address.</p>
+            <p  *ngIf="(!addUserFrm.controls['email'].errors?.pattern && addUserFrm.controls['email'].hasError('required'))">Please enter email address.</p>
+          </div>
+        </div>
+        <div class="form-grid">
+          <input type="text" placeholder="Mobile" type="text" name="mobile" [ngClass]="((addUserFrm.controls['mobile'].hasError('required') && addUserFrm.controls['mobile'].touched) || (addUserfrm.submitted && addUserFrm.controls['mobile'].errors)) ? 'error-input':''" value="" formControlName="mobile">
+          <div class="text-error" *ngIf="((addUserFrm.controls['mobile'].hasError('required') && addUserFrm.controls['mobile'].touched) || (addUserfrm.submitted && addUserFrm.controls['mobile'].errors))">
+            <p>Please enter mobile number.</p>
+          </div>
+        </div>
+        <div class="form-grid form-submit-full">
+          <input type="submit" [disabled]="(saveBtnDisabled)" value="Save">
+          <input type="button" routerLink="/" value="Back">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
