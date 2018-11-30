@@ -12,7 +12,7 @@ export class EdituserComponent implements OnInit {
   //varibles declearation
   public editUserFrm: FormGroup;
   public saveBtnDisabled:boolean = false;
-  public userData = [];
+  public userData:any = [];
   public userId = 0;
   
   constructor(
